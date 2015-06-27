@@ -1,0 +1,31 @@
+{
+  "name": "geo-app",
+  "version": "0.0.1",
+  "authors": [
+    "MMTLukas <lwanko.mmt-m2014@fh-salzburg.ac.at>"
+  ],
+  "description": "Template-App for creating a big amount of geo based apps",
+  "main": "index.html",
+  "keywords": [
+    "geo",
+    "coordinates",
+    "location",
+    "open",
+    "data",
+    "ogd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Leaflet.awesome-markers": "~2.0.2",
+    "angular-material": "~0.10.0",
+    "angular": "~1.4.1",
+    "bootstrap": "~3.3.5"
+  }
+}

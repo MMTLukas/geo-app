@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html ng-app="GeoApp">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/Leaflet.awesome-markers/dist/leaflet.awesome-markers.css">
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body layout="column" ng-controller="AppCtrl">
+
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <md-button ng-click="showMenu()" class="md-icon-button" aria-label="Menu">
+            <md-icon>menu</md-icon>
+        </md-button>
+        <h1>
+            <span>Menü</span>
+        </h1>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="Info">
+            <md-icon>info</md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+    <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">GeoApp</h1>
+    </md-toolbar>
+    <md-list>
+        <md-subheader class="md-no-sticky">Karte</md-subheader>
+        <md-list-item ng-click="changeTiles('openStreetMap')">
+            <md-icon>layers</md-icon>
+            <p>Straße</p>
+        </md-list-item>
+        <md-list-item ng-click="changeTiles('esriWorldImagery')">
+            <md-icon>satellite</md-icon>
+            <p>Satellit</p>
+        </md-list-item>
+        <md-list-item ng-click="changeTiles('mapboxOutdoors')">
+            <md-icon>terrain</md-icon>
+            <p>Terrain</p>
+        </md-list-item>
+        <md-divider></md-divider>
+
+        <md-subheader class="md-no-sticky">Route</md-subheader>
+        <md-list-item ng-click="changeTiles('opencyclemap')">
+            <md-icon>directions_walk</md-icon>
+            <p>Fuß</p>
+        </md-list-item>
+        <md-list-item ng-click="changeTiles('opencyclemap')">
+            <md-icon>directions_bike</md-icon>
+            <p>Fahrrad</p>
+        </md-list-item>
+        <md-list-item ng-click="changeTiles('opencyclemap')">
+            <md-icon>directions_car</md-icon>
+            <p>Auto</p>
+        </md-list-item>
+        <md-divider></md-divider>
+    </md-list>
+</md-sidenav>
+
+<md-content>
+    <leaflet id="map" markers="markers" center="center" tiles="tiles"></leaflet>
+
+    <md-button class="md-fab md-primary map-control" id="my-location">
+        <md-icon>my_location</md-icon>
+    </md-button>
+
+    <md-button class="md-fab md-primary map-control" id="route-to-marker">
+        <md-icon>directions</md-icon>
+    </md-button>
+</md-content>
+
+<!-- Angular Material Dependencies -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.js"></script>
+<script src="bower_components/leaflet/dist/leaflet.js"></script>
+<script src="bower_components/Leaflet.awesome-markers/dist/leaflet.awesome-markers.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

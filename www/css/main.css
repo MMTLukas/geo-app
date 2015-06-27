@@ -1,0 +1,76 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-attachment:fixed;
+
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+md-toolbar h1 {
+    font-size: 1.250em;
+    font-weight: 400;
+    margin: auto;
+}
+
+.md-button.md-fab md-icon{
+    margin-top:-4px;
+}
+
+md-content{
+    position: absolute;
+    z-index:0;
+    top:64px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+}
+
+#map{
+    position: absolute;
+    z-index:-1;
+    top:0;
+    bottom:0px;
+    left:0px;
+    right:0px;
+}
+
+.map-control{
+    position: absolute;
+    z-index:1;
+}
+
+.map-control#my-location{
+    bottom:10px;
+    right:10px;
+}
+
+.map-control#route-to-marker{
+    bottom:80px;
+    right:10px;
+}
